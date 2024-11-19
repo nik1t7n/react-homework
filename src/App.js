@@ -1,29 +1,6 @@
 import { useEffect, useState } from "react";
 import { ProductCard } from "./components/ProductCard/ProductCard";
-
-const defaultValue = [
-  {
-    id: 1,
-    title: "bababoi",
-    category: "baga",
-    price: 100,
-    image: "https://th.bing.com/th/id/R.eabc7594704938c63c65f75d66ea2e8c?rik=t4%2biO63ALDWkyw&riu=http%3a%2f%2fcbsnews1.cbsistatic.com%2fhub%2fi%2f2015%2f08%2f11%2f56e7f8c4-5815-4915-94f5-157e852170c6%2fgettyimages-103453502.jpg&ehk=NAc5%2b9XPgOfYYGRf8LGeKf9cgvsE7D6ZySoI%2f6N26uc%3d&risl=1&pid=ImgRaw&r=0"
-  },
-  {
-    id: 2,
-    title: "mamamoi",
-    category: "maga",
-    price: 101,
-    image: "https://th.bing.com/th/id/R.eabc7594704938c63c65f75d66ea2e8c?rik=t4%2biO63ALDWkyw&riu=http%3a%2f%2fcbsnews1.cbsistatic.com%2fhub%2fi%2f2015%2f08%2f11%2f56e7f8c4-5815-4915-94f5-157e852170c6%2fgettyimages-103453502.jpg&ehk=NAc5%2b9XPgOfYYGRf8LGeKf9cgvsE7D6ZySoI%2f6N26uc%3d&risl=1&pid=ImgRaw&r=0"
-  },
-  {
-    id: 3,
-    title: "papapoi",
-    category: "paga",
-    price: 102,
-    image: "https://th.bing.com/th/id/R.eabc7594704938c63c65f75d66ea2e8c?rik=t4%2biO63ALDWkyw&riu=http%3a%2f%2fcbsnews1.cbsistatic.com%2fhub%2fi%2f2015%2f08%2f11%2f56e7f8c4-5815-4915-94f5-157e852170c6%2fgettyimages-103453502.jpg&ehk=NAc5%2b9XPgOfYYGRf8LGeKf9cgvsE7D6ZySoI%2f6N26uc%3d&risl=1&pid=ImgRaw&r=0"
-  },
-]
+import "./index.css";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -37,12 +14,12 @@ function App() {
   }, []);
 
   return (
-    <div className="products-container"> 
+    <div className="products-container">
       {loading && <div>Loading...</div>}
       {products.map((product) => (
         <ProductCard data={product} />
-        ))} 
-      </div>
+      ))}
+    </div>
   );
 }
 
